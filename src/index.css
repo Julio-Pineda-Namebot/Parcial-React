@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* ── Tipografía ──────────────────────────────────── */
+  --font-sans: 'Poppins', sans-serif;
+
+  /* ── Marca principal ─────────────────────────────── */
+  --color-brand-50:  #eef2ff; /* blanco azulado */
+  --color-brand-100: #dde6fb; /* azul muy claro */
+  --color-brand-200: #c4c9e8; /* lavanda / periwinkle */
+  --color-brand-300: #96a8ec; /* azul suave */
+  --color-brand-600: #2d52c8; /* azul medio */
+  --color-brand-700: #1a46c2; /* azul principal */
+  --color-brand-800: #1535a0; /* azul oscuro */
+  --color-brand-900: #0f2878; /* azul muy oscuro */
+
+  /* ── Superficies ─────────────────────────────────── */
+  --color-surface:  #f9fafb;  /* fondo general de la app */
+  --color-inactive: #e5e7eb;  /* tarjeta de curso inactivo */
+
+  /* ── Éxito — badge activo, btn activar, Presencial ── */
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-700: #15803d;
+
+  /* ── Peligro — errores, btn eliminar ─────────────── */
+  --color-danger-50:  #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+
+  /* ── Advertencia — btn desactivar ────────────────── */
+  --color-warning-100: #fef9c3;
+  --color-warning-200: #fef08a;
+  --color-warning-700: #a16207;
+
+  /* ── Footer ──────────────────────────────────────── */
+  --color-footer-bg:     #0a0a0a;
+  --color-footer-border: #404040;
+  --color-footer-muted:  #a3a3a3;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  color: #4b5563;
+  transition: color 0.15s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-brand-700);
+  transition: width 0.3s ease;
+}
+.nav-link:hover { color: #111827; }
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--color-brand-700); }

@@ -1,12 +1,11 @@
+import { BookOpen } from 'lucide-react'
 import CourseCard from '@/components/courses/CourseCard'
 
 function CourseList({ cursos, onEliminar, onToggleActivo }) {
   if (cursos.length === 0) {
     return (
       <div className="text-center text-gray-400 py-16 bg-white rounded-xl shadow-md">
-        <p className="text-5xl mb-4">
-          <i class="fa-solid fa-book"></i>
-        </p>
+        <BookOpen size={48} className="mx-auto mb-4" aria-hidden="true" />
         <p className="text-base font-medium">No hay cursos registrados.</p>
         <p className="text-sm mt-1">¡Agrega el primero usando el formulario!</p>
       </div>

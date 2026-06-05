@@ -1,3 +1,5 @@
+import { Clock, Banknote } from 'lucide-react'
+
 const MODALIDAD_STYLES = {
   Presencial: 'bg-success-100 text-success-700',
   Virtual:    'bg-brand-100 text-brand-700',
@@ -27,12 +29,12 @@ function CourseCard({ curso, onEliminar, onToggleActivo }) {
       <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{descripcion}</p>
 
       <div className="flex gap-4 text-sm text-gray-700">
-        <span>
-          <i className="fa-solid fa-clock"></i>{' '}
+        <span className="inline-flex items-center gap-1.5">
+          <Clock size={16} aria-hidden="true" />
           {duracion}
         </span>
-        <span>
-          <i className="fa-solid fa-money-bill"></i>{' '}
+        <span className="inline-flex items-center gap-1.5">
+          <Banknote size={16} aria-hidden="true" />
           S/ {parseFloat(precio).toFixed(2)}
         </span>
       </div>
@@ -49,6 +51,7 @@ function CourseCard({ curso, onEliminar, onToggleActivo }) {
 
       <div className="flex gap-2 mt-auto pt-3 border-t border-gray-200">
         <button
+          type="button"
           onClick={() => onToggleActivo(id)}
           className={`flex-1 text-xs py-1.5 rounded-full font-medium transition-colors cursor-pointer ${
             activo
@@ -59,6 +62,7 @@ function CourseCard({ curso, onEliminar, onToggleActivo }) {
           {activo ? 'Desactivar' : 'Activar'}
         </button>
         <button
+          type="button"
           onClick={() => onEliminar(id)}
           className="flex-1 text-xs py-1.5 rounded-full font-medium bg-danger-100 text-danger-700 hover:bg-danger-200 transition-colors cursor-pointer"
         >

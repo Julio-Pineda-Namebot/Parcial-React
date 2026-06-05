@@ -40,8 +40,9 @@ function CourseForm({ onAgregar }) {
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-700">Nombre</label>
+          <label htmlFor="nombre" className="text-sm font-medium text-gray-700">Nombre</label>
           <input
+            id="nombre"
             type="text"
             name="nombre"
             value={form.nombre}
@@ -52,8 +53,9 @@ function CourseForm({ onAgregar }) {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-700">Duración</label>
+          <label htmlFor="duracion" className="text-sm font-medium text-gray-700">Duración</label>
           <input
+            id="duracion"
             type="text"
             name="duracion"
             value={form.duracion}
@@ -64,8 +66,9 @@ function CourseForm({ onAgregar }) {
         </div>
 
         <div className="flex flex-col gap-1 md:col-span-2">
-          <label className="text-sm font-medium text-gray-700">Descripción</label>
+          <label htmlFor="descripcion" className="text-sm font-medium text-gray-700">Descripción</label>
           <textarea
+            id="descripcion"
             name="descripcion"
             value={form.descripcion}
             onChange={handleChange}
@@ -76,8 +79,9 @@ function CourseForm({ onAgregar }) {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-700">Modalidad</label>
+          <label htmlFor="modalidad" className="text-sm font-medium text-gray-700">Modalidad</label>
           <select
+            id="modalidad"
             name="modalidad"
             value={form.modalidad}
             onChange={handleChange}
@@ -91,8 +95,9 @@ function CourseForm({ onAgregar }) {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-700">Precio (S/)</label>
+          <label htmlFor="precio" className="text-sm font-medium text-gray-700">Precio (S/)</label>
           <input
+            id="precio"
             type="number"
             name="precio"
             value={form.precio}

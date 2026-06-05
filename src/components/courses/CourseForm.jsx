@@ -109,7 +109,7 @@ function CourseForm({ onAgregar }) {
             type="submit"
             className="bg-brand-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-brand-800 transition-colors cursor-pointer"
           >
-            Guardar Curso →
+            Guardar Curso
           </button>
         </div>
       </form>

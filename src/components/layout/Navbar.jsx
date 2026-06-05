@@ -15,9 +15,6 @@ function Navbar() {
             className="h-10 w-[145.2px]"
           />
         </Link>
-        <div className="flex-1 w-full flex justify-center">
-          <input type="text" placeholder="Buscar cursos..." className="w-96 p-1 border border-gray-300 rounded-md" />
-        </div>
         <ul className="flex items-center gap-6 list-none m-0 p-0">
           <li>
             <NavLink to="/" end className={navLinkClass}>

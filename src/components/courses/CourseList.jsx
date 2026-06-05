@@ -4,7 +4,9 @@ function CourseList({ cursos, onEliminar, onToggleActivo }) {
   if (cursos.length === 0) {
     return (
       <div className="text-center text-gray-400 py-16 bg-white rounded-xl shadow-md">
-        <p className="text-5xl mb-4">📚</p>
+        <p className="text-5xl mb-4">
+          <i class="fa-solid fa-book"></i>
+        </p>
         <p className="text-base font-medium">No hay cursos registrados.</p>
         <p className="text-sm mt-1">¡Agrega el primero usando el formulario!</p>
       </div>
